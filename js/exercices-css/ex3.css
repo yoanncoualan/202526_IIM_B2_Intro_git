@@ -1,0 +1,14 @@
+.rectangle{
+    width: 300px;
+    height: 100px;
+    background-color: lightcoral;
+    transition: all 0.3s ease;
+}
+
+.rectangle.vert{
+    background-color: lightgreen;
+}
+
+.rectangle.cacher{
+    opacity: 0;
+}

@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+}
+
+.burger span{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+
+    transition: all 0.3s ease;
+}
+
+nav ul{
+    display: none;
+}
+
+body.open{
+    overflow: hidden;
+}
+
+body.open nav ul{
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+body.open nav ul a{
+    color: white;
+    font-size: 30px;
+}
+
+body.open .burger span{
+    background-color: white;
+}
+
+body.open .burger span:nth-child(1){
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+body.open .burger span:nth-child(2){
+    opacity: 0;
+}
+
+body.open .burger span:nth-child(3){
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
